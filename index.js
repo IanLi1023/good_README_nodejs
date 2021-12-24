@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const generateMD = require('./generateMD.js');
 inquirer
 
     .prompt([
@@ -37,12 +37,12 @@ inquirer
         {
             type: 'list',
             message: 'What type of license(s) did you utilize?',
-            name: 'licence:',
+            name: 'license:',
             choices: [
-                'The MIT License',
-                'The GPL License',
-                'Apache License',
-                'GNU License',
+                'MIT',
+                'GPL',
+                'Apache',
+                'ISC',
                 'N/A',
             ],
             validate: (value) => {if(value) {return(true)} else {return 'Please provide information'}}
@@ -50,7 +50,7 @@ inquirer
         {
             type: 'input',
             message: 'What is your GitHub username?',
-            name: 'questions:',
+            name: 'username',
             validate: (value) => {if(value) {return(true)} else {return 'Please provide information'}}
         },
         {
@@ -66,3 +66,10 @@ inquirer
             validate: (value) => {if(value) {return(true)} else {return 'Please provide information'}}
         },
     ]) 
+
+.then((answers) =>
+    fs.writeFile(
+        `${answers.title}.md`, 
+        generateMD(answers), 
+        err => err ? console.error(err) : console.log('Success! Your ReadMe had been created!'))
+    );
