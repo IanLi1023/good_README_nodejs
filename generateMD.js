@@ -1,6 +1,6 @@
 // badge function
 function badge(license){
-    return `![Badge](https://img.shields.io/badge/License-${license}-blueviolet)`
+    return `![Badge](https://img.shields.io/badge/License-${license}-green)`
   }
 
 // function to generate markdown for README
