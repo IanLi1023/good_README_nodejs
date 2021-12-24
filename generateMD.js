@@ -32,9 +32,11 @@ ${data.contribution}
 ${data.tests}
 
 ## Questions
-**Github Username: ${data.username}
-**Github Profile: www.github.com/${data.profile}
-**Email Address: ${data.email}
+** Github Username: ${data.username}
+
+** Github Profile: www.github.com/${data.profile}
+
+** Email Address: ${data.email}
 `;
 
 }
