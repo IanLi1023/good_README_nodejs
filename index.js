@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMD = require('./generateMD.js');
+const generateMD = require('./utils/generateMD.js');
 inquirer
 
     .prompt([
