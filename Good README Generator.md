@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Good README Generator
 # Description
-Good README Generator is an application that generates README.md files.   Answer some questions about your application  and it will automatically generate a readme for you. Try it out on your next project!
+Good README Generator is an application that generates README.md files. Answer some questions about your application and it will automatically generate a readme for you. Try it out on your next project!
 
 ## Table of Contents
 * [Installation](#installation)
@@ -21,6 +21,8 @@ Download the application and run npm install.
 
 ## Usage
 Open a terminal window, type in "node index" and answer the provided questions. Once completed the application will generate the README.md file.
+
+![caption](GoodREADMEGenerator.gif)
     
 ## License
 Good README Generator is covered under the MIT license.
